@@ -4,9 +4,16 @@ public class Faculdade {
 
     public static void main(String[] args) {
 
-        Aluno aluno1 = new Aluno("João", "00045618956");
+        Aluno Joao = new Aluno("João", "00045618956");
+        Disciplina Matematica = new Disciplina("Matematica", "Matematica");
+        Aluno Pedro = new Aluno("Pedro", "00045618951");
+        Matricula matricula1 = new Matricula(Joao, Matematica);
         
-        System.out.println(aluno1.toString());
+        
+        
+        System.out.println(Joao.toString());
+        System.out.println(Matematica.toString());
+        System.out.println(Matricula.toString());
         
     }
     
