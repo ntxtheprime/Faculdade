@@ -1,29 +1,31 @@
 package faculdade;
 
 public class Matricula {
-    
-    public String status;
 
-    public Matricula(String status) {
-        this.status = status;
+    public Aluno Aluno;
+    public Disciplina Disciplina;
+    public String status = "aberta";
+
+    public Matricula(Aluno aluno, Disciplina disciplina) {
+        this.Aluno = aluno;
+        this.Disciplina = disciplina;
     }
-    
-    public boolean alteraAluno(){
-        if (status.equals("finalizada")){
-            System.out.println("Alterado com sucesso");
-            return true;
+
+    public boolean alteraAluno(Aluno aluno) {
+        if (status.equals("finalizada")) {
+            return false; // Já está finalizada, então não poderá alterar o aluno
         }
-        System.out.println("Impossivel aletar o aluno de curso, matricula está finalizada");
-        return false;
+
+        this.Aluno = aluno; // alterando o aluno pelo que foi inserido neste método
+        return true;
     }
-    public boolean alteraDisciplina(){
-        if (!status.equals("finalizada")){
-            System.out.println("Disciplina alterada com sucesso");
-            return true;
+
+    public boolean alteraDisciplina(Disciplina disciplina) {
+        if (status.equals("finalizada")) {
+            return false;
         }
-        System.out.println("Impossivel alterar, a matricula está finalizada");
-        return false;
+
+        this.Disciplina = disciplina;
+        return true;
     }
-    
-    
 }
