@@ -18,17 +18,19 @@ public class Faculdade {
         System.out.println(matricula1);
 
         // Alterar o aluno:
-        matricula1.alteraAluno(Pedro);
-        System.out.println(matricula1);
+        matricula1.alteraAlunoEImprime(Pedro);
 
         // Alterar a disciplina:
-        matricula1.alteraDisciplina(Portugues);
-        System.out.println(matricula1);
+        matricula1.alteraDisciplinaEImprime(Portugues);
+
+        // Finalizar matricula
+        matricula1.status = "finalizada";
 
 //        System.out.println(Joao.toString());
 //        System.out.println(Matematica.toString());
 //        System.out.println(matricula1.toString());
 
     }
+
 
 }

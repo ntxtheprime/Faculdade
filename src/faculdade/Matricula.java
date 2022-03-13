@@ -29,6 +29,18 @@ public class Matricula {
         return true;
     }
 
+    public void alteraDisciplinaEImprime(Disciplina disciplina) {
+        boolean sucesso = alteraDisciplina(disciplina);
+        if (sucesso) System.out.println("Disciplina alterada para: " + this.Disciplina.toString());
+        else System.out.println("Não é permitido alterar a disciplina!");
+    }
+
+    public void alteraAlunoEImprime(Aluno aluno) {
+        boolean sucesso = alteraAluno(aluno);
+        if (sucesso) System.out.println("Aluno alterado para: " + this.Aluno.toString());
+        else System.out.println("Não é permitido alterar o aluno!");
+    }
+
     public String toString() {
         return "Aluno: " + Aluno.toString() +
                 "Disciplina: " + Disciplina.toString();
