@@ -30,6 +30,6 @@ public class Matricula {
     }
     
     public String toString(){
-        return Aluno.toString + Disciplina.toString;
+        return Aluno.toString() + Disciplina.toString();
     }
 }
