@@ -28,8 +28,9 @@ public class Matricula {
         this.Disciplina = disciplina;
         return true;
     }
-    
-    public String toString(){
-        return Aluno.toString() + Disciplina.toString();
+
+    public String toString() {
+        return "Aluno: " + Aluno.toString() +
+                "Disciplina: " + Disciplina.toString();
     }
 }
